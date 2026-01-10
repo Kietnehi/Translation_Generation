@@ -28,12 +28,32 @@ async def translate(req: TranslateRequest):
     return {"translations": translations}
 
 
+@app.post("/debug_prompt")
+async def debug_prompt(req: TranslateRequest):
+    """Return the formatted system instruction and the user prompt that would be sent
+    for each target language without invoking the model. Useful to verify the system
+    instruction formatting (e.g., replacing [Target Language]).
+    """
+    langs = req.languages or ["English"]
+    formatted = {}
+    user_prompts = {}
+    for lang in langs:
+        if req.system_prompt:
+            formatted_prompt = req.system_prompt.replace("[Target Language]", lang)
+        else:
+            formatted_prompt = None
+
+        user_prompts[lang] = f"Please translate the following text into {lang}, output only the translated content:\n{req.text}"
+        formatted[lang] = formatted_prompt
+
+    return {"system_prompt": formatted, "user_prompt": user_prompts}
+
+
 @app.get("/")
 def index():
     return FileResponse("static/index.html")
 
 
-app.mount("/static", StaticFiles(directory="static"), name="static")
 
 
 # ---- Tích hợp auto-reload trực tiếp ----
