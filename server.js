@@ -13,6 +13,49 @@ app.use(cors());
 app.use(express.json());
 app.use(express.static('dist'));
 
+// Simple rate limiting middleware
+const rateLimitMap = new Map();
+const RATE_LIMIT_WINDOW_MS = 60000; // 1 minute
+const RATE_LIMIT_MAX_REQUESTS = 10; // Max 10 requests per minute
+
+function rateLimit(req, res, next) {
+  const clientId = req.ip || req.connection.remoteAddress;
+  const now = Date.now();
+  
+  if (!rateLimitMap.has(clientId)) {
+    rateLimitMap.set(clientId, { count: 1, resetTime: now + RATE_LIMIT_WINDOW_MS });
+    return next();
+  }
+  
+  const clientData = rateLimitMap.get(clientId);
+  
+  if (now > clientData.resetTime) {
+    // Reset the counter
+    rateLimitMap.set(clientId, { count: 1, resetTime: now + RATE_LIMIT_WINDOW_MS });
+    return next();
+  }
+  
+  if (clientData.count >= RATE_LIMIT_MAX_REQUESTS) {
+    return res.status(429).json({
+      error: 'Too many requests',
+      message: 'Rate limit exceeded. Please try again later.'
+    });
+  }
+  
+  clientData.count++;
+  next();
+}
+
+// Clean up old entries periodically
+setInterval(() => {
+  const now = Date.now();
+  for (const [clientId, data] of rateLimitMap.entries()) {
+    if (now > data.resetTime) {
+      rateLimitMap.delete(clientId);
+    }
+  }
+}, RATE_LIMIT_WINDOW_MS);
+
 // Tencent Cloud signature generation
 function generateSignature(secretKey, signStr) {
   const hmac = crypto.createHmac('sha256', secretKey);
@@ -53,7 +96,7 @@ function generateAuth(secretId, secretKey, host, action, timestamp) {
 }
 
 // Translation API endpoint with system prompt support
-app.post('/api/translate', async (req, res) => {
+app.post('/api/translate', rateLimit, async (req, res) => {
   try {
     const { text, sourceLang, targetLang, systemPrompt, useTextGeneration } = req.body;
     
