@@ -40,6 +40,7 @@
 ![Quantization](https://img.shields.io/badge/Optimization-4bit_Quant-green?style=for-the-badge)
 ![CUDA](https://img.shields.io/badge/Hardware-CUDA_Supported-76B900?style=for-the-badge&logo=nvidia&logoColor=white)
 
+</div>
 ---
 
 
@@ -51,6 +52,7 @@ This diagram illustrates the end-to-end workflow of the **Translation + Custom S
   <img src="image/pipeline.jpg" alt="Translation System Pipeline" width="900px" style="border-radius: 12px; border: 1px solid #eaecef;"/>
 </p>
 
+---
 ## Features
 
 - Translate text into multiple target languages.
