@@ -41,6 +41,44 @@
 ![CUDA](https://img.shields.io/badge/Hardware-CUDA_Supported-76B900?style=for-the-badge&logo=nvidia&logoColor=white)
 
 ---
+
+
+## 🔁 System Pipeline & Architecture
+
+This diagram illustrates the end-to-end workflow of the **Translation + Custom System Prompt Web UI**, from user input to parallel multilingual output.
+
+<p align="center">
+  <img src="image/pipeline.jpg" alt="Translation System Pipeline" width="900px" style="border-radius: 12px; border: 1px solid #eaecef;"/>
+</p>
+
+### Pipeline Explanation
+
+1. **User Input**
+   - Source text
+   - Target languages
+   - Optional System Prompt (Persona / Context / Constraints)
+
+2. **System Prompt Designer**
+   - Combines Role, Context, and Constraints
+   - Injects `[Target Language]` dynamically for each translation stream
+
+3. **Logic Splitting Engine**
+   - Generates independent system instructions per language
+   - Ensures constraint consistency across all outputs
+
+4. **HY-MT1.5-1.8B Inference Engine**
+   - 4-bit quantized model
+   - Parallel GPU inference via FastAPI backend
+
+5. **Post-processing & Formatting**
+   - Language-wise result separation
+   - Constraint validation (e.g., protected terms)
+
+6. **Web UI Output**
+   - Card-based multilingual results
+   - Copy-friendly interface
+   - Translation history tracking
+
 </div>
 
 
