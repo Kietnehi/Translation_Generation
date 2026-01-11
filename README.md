@@ -1,7 +1,17 @@
 # 🌐 Translation + Custom System Prompt Web UI
 
 > **Intelligent parallel translation powered by Tencent HY-MT1.5-1.8B & Custom System Prompts.**
-> Dự án cung cấp giao diện Web và Backend nhẹ để dịch thuật văn bản với khả năng tùy chỉnh System Prompt chuyên sâu.
+> The project provides a lightweight web interface and backend for text translation with extensive System Prompt customization capabilities.
+
+<div align="center">
+
+### Powered by Tencent HY-MT1.5-1.8B with Custom System Prompt
+
+<img src="image/poster.jpg" alt="Translation Text Generation Poster" width="900"/>
+
+<p><i>Lightweight Web UI for Parallel Translation with Custom System Prompt Design</i></p>
+
+</div>
 
 <div align="center">
 
@@ -40,16 +50,6 @@
 ---
 </div>
 
-<div align="center">
-
-# 🌍 Translation & Text Generation System  
-### Powered by Tencent HY-MT1.5-1.8B with Custom System Prompt
-
-<img src="image/poster.jpg" alt="Translation Text Generation Poster" width="900"/>
-
-<p><i>Lightweight Web UI for Parallel Translation with Custom System Prompt Design</i></p>
-
-</div>
 
 ## Features
 
