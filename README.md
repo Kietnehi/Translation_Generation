@@ -20,16 +20,13 @@
 [![GitHub forks](https://img.shields.io/github/forks/Kietnehi/Translation_Generation?style=for-the-badge&color=orange)](https://github.com/Kietnehi/Translation_Generation/network/members)
 ![GitHub repo size](https://img.shields.io/github/repo-size/Kietnehi/Translation_Generation?style=for-the-badge&color=blueviolet)
 ![GitHub last commit](https://img.shields.io/github/last-commit/Kietnehi/Translation_Generation?style=for-the-badge&color=brightgreen)
-
 ![Python](https://img.shields.io/badge/Python_3.10+-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![Tencent](https://img.shields.io/badge/Tencent_AI-0052D9?style=for-the-badge&logo=tencent&logoColor=white)
-
 ![Status](https://img.shields.io/badge/Status-Active-brightgreen?style=for-the-badge)
 ![Maintained](https://img.shields.io/badge/Maintained%3F-yes-green.svg?style=for-the-badge)
 ![Open PRs](https://img.shields.io/github/issues-pr/Kietnehi/Translation_Generation?style=for-the-badge&color=orange)
 [![GitHub Profile](https://img.shields.io/badge/GitHub-Profile-181717?style=for-the-badge&logo=github)](https://github.com/Kietnehi)
 [![GitHub followers](https://img.shields.io/github/followers/Kietnehi?label=Follow%20Me&style=for-the-badge&color=236AD3)](https://github.com/Kietnehi)
-
 ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
 ![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)
 ![Python](https://img.shields.io/badge/Python_3.10+-3776AB?style=for-the-badge&logo=python&logoColor=white)
@@ -38,7 +35,6 @@
 ![Tencent](https://img.shields.io/badge/Tencent-0052D9?style=for-the-badge&logo=tencent&logoColor=white)
 ![NVIDIA](https://img.shields.io/badge/NVIDIA-76B900?style=for-the-badge&logo=nvidia&logoColor=white)
 ![VS Code](https://img.shields.io/badge/VS_Code-007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white)
-
 ![Tencent Model](https://img.shields.io/badge/Model-HY--MT1.5--1.8B-blue?style=for-the-badge&logo=tencent&logoColor=white)
 ![Hugging Face](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-FFD21E?style=for-the-badge&color=gray)
 ![Quantization](https://img.shields.io/badge/Optimization-4bit_Quant-green?style=for-the-badge)
