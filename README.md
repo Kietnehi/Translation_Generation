@@ -81,7 +81,7 @@ This diagram illustrates the end-to-end workflow of the **Translation + Custom S
 
 </div>
 
-
+---
 ## Features
 
 - Translate text into multiple target languages.
