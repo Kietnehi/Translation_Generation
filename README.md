@@ -7,7 +7,7 @@
 
 ### Powered by Tencent HY-MT1.5-1.8B with Custom System Prompt
 
-<img src="image/poster.jpg" alt="Translation Text Generation Poster" width="900"/>
+<img src="image/poster.jpg" alt="Translation Text Generation Poster" width="550"/>
 
 <p><i>Lightweight Web UI for Parallel Translation with Custom System Prompt Design</i></p>
 
