@@ -41,7 +41,7 @@
 ![CUDA](https://img.shields.io/badge/Hardware-CUDA_Supported-76B900?style=for-the-badge&logo=nvidia&logoColor=white)
 
 </div>
----
+
 
 
 ## 🔁 System Pipeline & Architecture
